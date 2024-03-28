@@ -1,4 +1,4 @@
-from transformers import AutoModelForCausalLM, AutoTokenizer
+from transformers import AutoModelForCausalLM, CodeGenTokenizerFast as Tokenizer
 from PIL import Image
 import urllib
 
@@ -6,7 +6,7 @@ class InferlessPythonModel:
     def initialize(self):
         model_id = "vikhyatk/moondream1"
         self.model = AutoModelForCausalLM.from_pretrained(model_id, trust_remote_code=True)
-        self.tokenizer = AutoTokenizer.from_pretrained(model_id)
+        self.tokenizer = Tokenizer.from_pretrained(model_id)
 
     def download_image(self,image_url):
         file_name = f'image.{image_url.split(".")[-1]}'
