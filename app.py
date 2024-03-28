@@ -4,10 +4,9 @@ import urllib
 
 class InferlessPythonModel:
     def initialize(self):
-        model_id = "vikhyatk/moondream2"
-        revision = "2024-03-06"
-        self.model = AutoModelForCausalLM.from_pretrained(model_id, trust_remote_code=True, revision=revision)
-        self.tokenizer = AutoTokenizer.from_pretrained(model_id, revision=revision)
+        model_id = "vikhyatk/moondream1"
+        self.model = AutoModelForCausalLM.from_pretrained(model_id, trust_remote_code=True)
+        self.tokenizer = AutoTokenizer.from_pretrained(model_id)
 
     def download_image(self,image_url):
         file_name = f'image.{image_url.split(".")[-1]}'
