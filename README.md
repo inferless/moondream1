@@ -1,5 +1,5 @@
 # Moondream2
-Moondream2 is a small vision language model designed to run efficiently on edge devices.  It comprises 1.86 billion parameters, initially weighted with data from SigLIP and Phi-1.5. Primarily, Moondream excels in responding to image-related queries, generating captions, and performing various other vision language tasks.
+Moondream is a 1.6B parameter model built using SigLIP, Phi-1.5 and the LLaVa training dataset. Primarily, Moondream excels in responding to image-related queries, generating captions, and performing various other vision language tasks.
 
 ---
 ## Prerequisites
