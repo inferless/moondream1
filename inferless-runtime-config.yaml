@@ -1,0 +1,11 @@
+build:
+  cuda_version: "12.1.1"
+  system_packages:
+    - "libssl-dev"
+  python_packages:
+    - "einops==0.7.0"
+    - "timm==0.9.16"
+    - "torch==2.2.1"
+    - "torchvision==0.17.1"
+    - "pillow==10.2.0"
+    - "transformers==4.39.1"
