@@ -1,4 +1,4 @@
-# Moondream2
+# Moondream1
 Moondream is a 1.6B parameter model built using SigLIP, Phi-1.5 and the LLaVa training dataset. Primarily, Moondream excels in responding to image-related queries, generating captions, and performing various other vision language tasks.
 
 ---
