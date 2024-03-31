@@ -5,7 +5,7 @@ import urllib
 class InferlessPythonModel:
     def initialize(self):
         model_id = "vikhyatk/moondream1"
-        self.model = AutoModelForCausalLM.from_pretrained(model_id, trust_remote_code=True)
+        self.model = AutoModelForCausalLM.from_pretrained(model_id, trust_remote_code=True).to("cuda")
         self.tokenizer = Tokenizer.from_pretrained(model_id)
 
     def download_image(self,image_url):
