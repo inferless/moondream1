@@ -1,3 +1,6 @@
+import os
+os.environ["HF_HUB_ENABLE_HF_TRANSFER"]='1'
+from huggingface_hub import snapshot_download
 from transformers import AutoModelForCausalLM, CodeGenTokenizerFast as Tokenizer
 from PIL import Image
 import urllib
@@ -5,6 +8,7 @@ import urllib
 class InferlessPythonModel:
     def initialize(self):
         model_id = "vikhyatk/moondream1"
+        snapshot_download(repo_id=model_id,allow_patterns=["*.safetensors"])
         self.model = AutoModelForCausalLM.from_pretrained(model_id, trust_remote_code=True).to("cuda")
         self.tokenizer = Tokenizer.from_pretrained(model_id)
 
